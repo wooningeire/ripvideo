@@ -1,0 +1,37 @@
+* {
+    outline: 0;
+    box-sizing: border-box;
+}
+
+:host {
+    padding: 0 4px;
+
+    font: var(--font);
+    background: var(--color-b1);
+    color: var(--color-a2);
+
+    --color-a1: #ff8214;
+    --color-a2: #ffd24d;
+    --color-b1: #470e6e;
+    --color-b2: #2a0742;
+    --font: 16px TW Cen MT, Overpass, sans-serif;
+}
+
+.content > input[type="text"] {
+    width: max-content;
+
+    background: #0000;
+    color: var(--color-a2);
+    border: 0;
+    line-height: 1.2;
+    font: var(--font);
+}
+
+.content > .separator {
+    padding: 0 4px;
+}
+
+/*.content > input:not(:last-child):after {
+    content: ":";
+    padding: 0 4px;
+}*/

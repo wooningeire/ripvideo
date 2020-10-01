@@ -1,0 +1,114 @@
+* {
+    outline: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-a1: #ff8214;
+    --color-a2: #ffd24d;
+    --color-b1: #470e6e;
+    --color-b2: #2a0742;
+    --font: 16px TW Cen MT, Overpass, sans-serif;
+}
+
+body, h1 {
+    margin: 0;
+}
+
+body {
+    overflow: hidden;
+
+    font: var(--font);
+    background: linear-gradient(40deg, var(--color-b1), var(--color-b2));
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+}
+
+main > * + * {
+    margin-top: 16px;
+}
+
+main > header {
+    font-size: 2.5rem;
+    font-weight: 900;
+    font-stretch: 75%;
+    color: var(--color-a2);
+    text-shadow: 4px 4px 0 #0003;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+main > section {
+    flex-grow: 1;
+    padding: 12px;
+
+    color: var(--color-b2);
+    background: var(--color-a2);
+    border-radius: 8px;
+    box-shadow: 4px 4px 0 #0003;
+}
+
+main > section > form {
+    overflow-y: auto;
+}
+
+main > section > form > div > * + * {
+    margin-top: 8px;
+}
+
+main > section > form > div > fieldset {
+    border: 2px solid var(--color-b2);
+}
+
+main > section > form > div > fieldset > legend {
+    padding: 0 6px;
+
+    background: var(--color-b2);
+    color: var(--color-a2);
+    font-size: 1.3rem;
+    font-weight: 600;
+    font-stretch: 75%;
+}
+
+main > section h3 {
+    margin: .3em 0 0 0;
+    
+    color: var(--color-b1);
+    font-size: 1.2rem;
+    font-weight: 600;
+    font-stretch: 75%;
+}
+
+main > section p {
+    margin: .2em 0 0 0;
+}
+
+main > section p.explain {
+    opacity: .7;
+    font-size: .8rem;
+}
+
+main > section input[type="text"],
+main > section input[type="number"] {
+    width: fit-content;
+    padding: 0 4px;
+
+    background: var(--color-b1);
+    color: var(--color-a2);
+    border: 0;
+    line-height: 1.2;
+    font: var(--font);
+}
+
+main .disabled,
+main [disabled] {
+    opacity: .5;
+    pointer-events: none;
+    user-select: none;
+}

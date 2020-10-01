@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>Ripvideo</title>
+        <meta charset="UTF-8" />
+
+        <script src="/eel.js"></script>
+
+        <script src="./js/index.js" type="module" defer></script>
+        <link href="./css/index.css" rel="stylesheet" />
+        <link href="./css/twcenmt/index.css" rel="stylesheet" />
+    </head>
+
+    <body>
+        <main>
+            <!--<header>
+                <h1>Ripvideo</h1>
+            </header>-->
+
+            <section>
+                <form>
+                    <div>
+                        <fieldset>
+                            <legend>Target video</legend>
+
+                            <input type="file" class="video-input" accept="video/*" />
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>Extraction type</legend>
+
+                            <input type="checkbox" class="do-visual" id="do-visual" /> <label for="do-visual">Visual</label><br />
+                            <input type="checkbox" class="do-audio" id="do-audio" checked /> <label for="do-audio">Audio</label>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>Editing</legend>
+
+                            <div class="disabled">
+                                <h3>Cutting</h3>
+                                <p class="explain">Use times past the media boundaries to add blank frames or samples.</p>
+
+                                <p>From <input-time></input-time> to <input-time></input-time></p>
+                                <p>(Duration: <input-time></input-time>)</p>
+                            </div>
+
+                            <div>
+                                <h3>Speed</h3>
+
+                                <input type="number" class="speed" value="1" step=".1" />
+                            </div>
+                        </fieldset>
+
+                        <button class="extract" disabled>Extract</button>
+
+                        <p class="status">… status …</p>
+                    </div>
+                </form>
+            </section>
+        </main>
+    </body>
+</html>
